@@ -870,7 +870,9 @@ function initAntigravityCanvas() {
       ctx.save();
       ctx.translate(this.x, this.y);
       ctx.rotate(this.angle);
-      ctx.fillStyle = this.colorBase + this.opacity + ')';
+      const isLight = document.body.classList.contains('light-mode');
+      const finalColor = isLight ? `rgba(0, 0, 0, ${this.opacity * 0.4})` : `rgba(255, 255, 255, ${this.opacity * 0.4})`;
+      ctx.fillStyle = finalColor;
       ctx.font = `${this.size}px -apple-system, BlinkMacSystemFont, sans-serif`;
       ctx.fillText(this.symbol, -this.size / 2, this.size / 2);
       ctx.restore();
