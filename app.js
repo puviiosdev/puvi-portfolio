@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   
   // Initialize Antigravity Canvas
-  initAntigravityCanvas();
+  // initAntigravityCanvas();
   
   // Initialize Projects
   initProjects();
