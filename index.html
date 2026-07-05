@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Puviyarasan P — iOS Developer Portfolio</title>
+  <meta name="description"
+    content="Puviyarasan P — iOS Developer with 4+ years building Swift, UIKit & SwiftUI apps. Explore my interactive macOS & iOS Portfolio.">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css?v=10">
+</head>
+
+<body>
+  <div class="desktop-container">
+
+    <!-- Animated Background -->
+    <div class="wallpaper-container">
+      <canvas id="antigravity-canvas"></canvas>
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+      <div class="blob blob-3"></div>
+    </div>
+
+    <!-- macOS Top Menu Bar -->
+    <header class="menu-bar" id="menu-bar">
+      <div class="menu-left">
+        <span class="apple-logo"></span>
+        <span class="menu-item active">Puvi OS</span>
+        <span class="menu-item">File</span>
+        <span class="menu-item">View</span>
+        <span class="menu-item">Help</span>
+      </div>
+      <div class="menu-right">
+        <!-- Theme Toggle -->
+        <div class="menu-item theme-toggle-container" onclick="toggleTheme()"
+          style="cursor: pointer; display: flex; align-items: center; justify-content: center; width: 28px; height: 28px; border-radius: 6px; margin-right: 4px;"
+          title="Toggle Light/Dark Mode">
+          <svg id="theme-toggle-icon" viewBox="0 0 24 24" width="16" height="16"
+            style="transition: transform 0.35s ease;">
+            <path fill="currentColor"
+              d="M12.1 22c-5 0-9.1-4.1-9.1-9.1C3 7.8 7.2 3.5 12.5 3c.3 0 .5.2.5.5v.3c-.6 2.3.1 4.7 1.7 6.4s4 2.3 6.4 1.7c.1 0 .3.1.4.3.1.2.1.4-.1.5-1.9 4.8-6.5 8.1-11.3 9.3z" />
+          </svg>
+        </div>
+        <!-- Wi-Fi Icon -->
+        <svg viewBox="0 0 24 24" width="16" height="16">
+          <path fill="currentColor"
+            d="M1 9l2 2c4.97-4.97 13.03-4.97 18 0l2-2C16.93 2.93 7.08 2.93 1 9zm8 8l3 3 3-3a4.237 4.237 0 0 0-6 0zm-4-4 2 2a7.074 7.074 0 0 1 10 0l2-2C15.14 9.14 8.87 9.14 5 13z" />
+        </svg>
+        <!-- Signal Icon -->
+        <svg viewBox="0 0 24 24" width="16" height="16">
+          <path fill="currentColor"
+            d="M12 21a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm0-5.5c-2.48 0-4.5-2.02-4.5-4.5S9.52 6.5 12 6.5s4.5 2.02 4.5 4.5-2.02 4.5-4.5 4.5zm0-5c-1.38 0-2.5 1.12-2.5 2.5s1.12 2.5 2.5 2.5 2.5-1.12 2.5-2.5-1.12-2.5-2.5-2.5zm0-7.5c-4.97 0-9 4.03-9 9 0 2.12.74 4.07 1.97 5.61l1.42-1.42A6.979 6.979 0 0 1 5 13c0-3.87 3.13-7 7-7s7 3.13 7 7c0 1.63-.56 3.13-1.5 4.31l1.42 1.42c1.23-1.54 1.97-3.49 1.97-5.61 0-4.97-4.03-9-9-9z" />
+        </svg>
+        <!-- Battery Icon -->
+        <span class="battery-status" style="margin-right: 2px;">100%</span>
+        <svg viewBox="0 0 24 24" width="16" height="16" id="battery-icon">
+          <path fill="currentColor"
+            d="M16 20H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2h12c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2zm3-11v6c1.1 0 2-.9 2-2v-2c0-1.1-.9-2-2-2z" />
+        </svg>
+        <!-- Live System Clock -->
+        <span class="system-time" id="top-bar-clock">Sun 1:57 PM</span>
+      </div>
+    </header>
+
+    <!-- Desktop Workspace -->
+    <main class="desktop-workspace" id="desktop-workspace">
+      <!-- Antigravity Hero (Centered Desktop View) -->
+      <div class="antigravity-hero">
+        <h1 class="hero-title">
+          <span class="word-1">Puviyarasan</span>
+          <span class="word-2">iOS</span>
+          <span class="word-3">Developer</span>
+        </h1>
+        <p class="hero-subtitle">
+          <span class="sub-1">Building</span>
+          <span class="sub-2">high-performance</span>
+          <span class="sub-3">mobile</span>
+          <span class="sub-4">experiences.</span>
+        </p>
+      </div>
+
+      <!-- Desktop Icon Grid (Left Sidebar) -->
+      <div class="desktop-icons">
+        <div class="desktop-icon" onclick="openWindow('terminal-window')">
+          <div class="icon-wrapper">
+            <!-- Terminal SVG -->
+            <svg viewBox="0 0 24 24">
+              <path fill="currentColor"
+                d="M20 4H4c-1.11 0-2 .9-2 2v12c0 1.1.89 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H4V8h16v10zm-2-1h-6v-2h6v2zm-8.29-2.29L12.41 12 9.71 9.29l1.41-1.41L15.24 12l-4.12 4.12-1.41-1.42z" />
+            </svg>
+          </div>
+          <span class="icon-name">Terminal</span>
+        </div>
+
+        <div class="desktop-icon" onclick="window.open('https://github.com/puviiosdev', '_blank')">
+          <div class="icon-wrapper">
+            <!-- GitHub SVG -->
+            <svg viewBox="0 0 24 24">
+              <path fill="currentColor"
+                d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z" />
+            </svg>
+          </div>
+          <span class="icon-name">GitHub</span>
+        </div>
+
+        <div class="desktop-icon" onclick="window.open('https://linkedin.com/in/puvi10', '_blank')">
+          <div class="icon-wrapper">
+            <!-- LinkedIn SVG -->
+            <svg viewBox="0 0 24 24">
+              <path fill="currentColor"
+                d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
+            </svg>
+          </div>
+          <span class="icon-name">LinkedIn</span>
+        </div>
+
+        <div class="desktop-icon" onclick="openWindow('contact-window')">
+          <div class="icon-wrapper">
+            <!-- Mail SVG -->
+            <svg viewBox="0 0 24 24">
+              <path fill="currentColor"
+                d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+            </svg>
+          </div>
+          <span class="icon-name">Contact Me</span>
+        </div>
+      </div>
+
+      <!-- PLACEHOLDER: Drag Windows and iPhone Simulator would follow here -->
+
+    </main>
+
+    <!-- macOS Desktop Dock (Bottom of screen) -->
+    <footer class="dock-container">
+      <div class="mac-dock">
+        <div class="dock-item" data-tooltip="About Me" onclick="openWindow('about-window')">
+          <svg viewBox="0 0 24 24">
+            <path fill="currentColor"
+              d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+          </svg>
+        </div>
+        <div class="dock-item" data-tooltip="Terminal" onclick="openWindow('terminal-window')">
+          <svg viewBox="0 0 24 24">
+            <path fill="currentColor"
+              d="M20 4H4c-1.11 0-2 .9-2 2v12c0 1.1.89 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H4V8h16v10zm-2-1h-6v-2h6v2zm-8.29-2.29L12.41 12 9.71 9.29l1.41-1.41L15.24 12l-4.12 4.12-1.41-1.42z" />
+          </svg>
+        </div>
+        <div class="dock-item" data-tooltip="GitHub Profile"
+          onclick="window.open('https://github.com/puviiosdev', '_blank')">
+          <svg viewBox="0 0 24 24">
+            <path fill="currentColor"
+              d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z" />
+          </svg>
+        </div>
+        <div class="dock-item" data-tooltip="Contact Me" onclick="openWindow('contact-window')">
+          <svg viewBox="0 0 24 24">
+            <path fill="currentColor"
+              d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+          </svg>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- External JS files -->
+  <script src="projects.js?v=10"></script>
+  <script src="app.js?v=10"></script>
+</body>
+
+</html>
