@@ -1,0 +1,20 @@
+{
+  "name": "puvi-portfolio",
+  "version": "1.0.0",
+  "homepage": "https://puviiosdev.github.io/puvi-portfolio/",
+  "description": "Interactive macOS & iOS Simulator Portfolio for Puviyarasan P",
+  "main": "app.js",
+  "scripts": {
+    "dev": "npx http-server -p 8000",
+    "start": "npx http-server -p 8000",
+    "deploy": "git push origin main"
+  },
+  "keywords": [
+    "portfolio",
+    "ios",
+    "macos",
+    "simulator"
+  ],
+  "author": "Puviyarasan P",
+  "license": "ISC"
+}
